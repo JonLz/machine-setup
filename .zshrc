@@ -82,6 +82,8 @@ fi
 # zshell
 ZSH_THEME=""
 export ZSH="/Users/jonlazar/.oh-my-zsh"
+plugins=(git zsh-autosuggestions)
+source $ZSH/oh-my-zsh.sh
 
 # Init rbenv
 eval "$(rbenv init -)"
