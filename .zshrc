@@ -24,17 +24,23 @@ export PATH="$FLUTTER_HOME/bin:$PATH"
 export PATH=/usr/local/rbenv/bin:$PATH
 
 # Alias
+
+## shell
 Alias l='ls -lah'
+
+## git
+alias gst='git status'
+alias gcam='git commit -am'
+
 alias lastweek='git log --pretty=format:"%an | %ad | %s" --graph --relative-date | grep "Jon" | tail -r' #Get changes from user made since inception
 alias mybr="git branch --sort=-committerdate | grep -e 'lazar/' | grep -ne '.*'"
 function cbr() { mybr | head -n ${1:-1} | tail -n 1 | cut -f 2- -d ' ' | xargs -I{} git checkout {} } 
+
+## Work
 alias kill-retail="psql -c 'select pg_terminate_backend(pg_stat_activity.pid) from pg_stat_activity where pg_stat_activity.datname = '\''retail_development'\'' and pid <> pg_backend_pid()'"
 alias kill-tt="psql -c 'select pg_terminate_backend(pg_stat_activity.pid) from pg_stat_activity where pg_stat_activity.datname = '\''test_track_development'\'' and pid <> pg_backend_pid()'"
 alias rubocop-all="git diff master --name-only | sed 's/retail\///' | grep -v 'config/routes.rb' | xargs -I{} rubocop --auto-correct {}"
 
-#
-alias gst='git status'
-Alias gcam='git commit -am'
 
 # Xcode
 openx(){ 
