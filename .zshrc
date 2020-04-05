@@ -26,7 +26,7 @@ export PATH=/usr/local/rbenv/bin:$PATH
 # Alias
 
 ## shell
-Alias l='ls -lah'
+alias l='ls -lah'
 
 ## git
 alias gst='git status'
