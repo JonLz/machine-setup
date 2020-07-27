@@ -11,15 +11,6 @@ export PATH=$HOME/.fastlane/bin:$PATH
 export GRADLE_HOME=/usr/local/opt/gradle/libexec
 export PATH=$GRADLE_HOME/bin:$PATH
 
-## Java
-export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
-export PATH=$JAVA_HOME/bin:$PATH
-export PATH=$PATH:/opt/gradle/gradle-4.4.1/bin
-
-## Flutter
-export FLUTTER_HOME="$HOME/flutter"
-export PATH="$FLUTTER_HOME/bin:$PATH"
-
 ## rbenv
 export PATH=/usr/local/rbenv/bin:$PATH
 
@@ -98,6 +89,3 @@ source $ZSH/oh-my-zsh.sh
 
 # Init rbenv
 eval "$(rbenv init -)"
-
-# Work
-source "$HOME/.bootstrap/env.sh"
