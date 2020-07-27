@@ -1,9 +1,10 @@
 # Core setup
 ## iTerm2 Terminal setup
 1. Install meslo font (for powerline shell) included in the `fonts` directory
-2. Switch color theme to [solarized dark](https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized)
-3. Update `ANSI Colors` > `Black Bright` (top right color) if zsh autosuggestions aren't showing up (`b8d444`)
-3. Preferences > Profiles > Keys > Presets > Natural Text Editing
+1. Change the shell font to meslo `Profiles` > `Text` > `Font`
+1. Switch color theme to [solarized dark](https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized)
+1. Update `ANSI Colors` > `Black Bright` (top right color) if zsh autosuggestions aren't showing up (`b8d444`)
+1. Preferences > Profiles > Keys > Presets > Natural Text Editing
 
 ## Mac OS setup
 1. Keyboard > Key Repeat > Fast
