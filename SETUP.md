@@ -15,6 +15,12 @@
 Skip the regular oh-my-zsh installer since we already have the setup steps included in our `.zshrc`
 
 1. `git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh`
+2. `cp .zshrc ~/.zshrc`
+
+### Install powerline-shell
+1. Follow the steps at the [powerline-shell setup repo](https://github.com/b-ryan/powerline-shell#setup)
+1. [Install pip](https://pip.pypa.io/en/stable/installing/) `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python get-pip.py`
+1. `pip install powerline-shell`
 
 ### Setup autosuggestions
 1.  `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
