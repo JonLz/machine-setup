@@ -30,3 +30,6 @@ Skip the regular oh-my-zsh installer since we already have the setup steps inclu
 ## Sublime text
 1. After installing [Sublime Text 3](https://www.sublimetext.com/3) to the `Applications` folder
 1. `ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
+  1. If `/usr/local/bin` does not exist, create it:
+  1. `sudo mkdir /usr/local/bin`
+  1. You may also need to use sudo to create the symlink above
