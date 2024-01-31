@@ -28,7 +28,7 @@ alias mybr="git branch --sort=-committerdate | grep -e 'lazar/' | grep -ne '.*'"
 function cbr() { mybr | head -n ${1:-1} | tail -n 1 | cut -f 2- -d ' ' | xargs -I{} git checkout {} } 
 
 # Xcode
-openx(){ 
+function openx(){ 
   if test -n "$(find . -maxdepth 1 -name '*.xcworkspace' -print -quit)"
   then
     echo "Opening workspace"
@@ -39,9 +39,23 @@ openx(){
     then
       echo "Opening project"
       open *.xcodeproj
-      return  
+      return
     else
-      echo "Nothing found"
+      if test -n "$(find . -maxdepth 2 -name 'Example.xcworkspace' -print -quit)"
+      then
+        echo "Opening Example app"
+        open Example/Example.xcworkspace
+        return
+      else
+        if test -n "$(find . -maxdepth 1 -name 'Package.swift' -print -quit)"
+        then
+          echo "Opening package"
+          open Package.swift
+          return
+        else
+          echo "Nothing found"
+        fi
+      fi
     fi
   fi
 }
