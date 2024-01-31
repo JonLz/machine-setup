@@ -60,6 +60,33 @@ function openx(){
   fi
 }
 
+function xcnuke() {
+  echo "⏳ Removing spm caches..."
+  rm -rf ~/Library/Caches/org.swift.swiftpm
+  rm -rf ~/Library/org.swift.swiftpm
+  echo "✅ Removed spm caches."
+  xcnukedd
+  echo "✅ Removed derived data."
+  echo "✅ Done."
+}
+
+function xcnukedd() {
+  echo "⏳ Removing derived data..."
+  local derivedDataPath="$HOME/Library/Developer/Xcode/DerivedData" 
+  mv "$derivedDataPath" "$HOME/.Trash/DerivedData-`uuidgen`"
+  echo "Deleted $derivedDataPath"
+}
+
+# Fuzzy find filenames
+function f () {
+  if [[ -z $2 ]]
+  then
+    find . -iname "*$1*"
+  else
+    find $2 -iname "*$1*"
+  fi
+}
+
 # Go to the root of the current git project, or just go one folder up
 function up() {
   export git_dir="$(git rev-parse --show-toplevel 2> /dev/null)"
